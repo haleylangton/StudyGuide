@@ -29,9 +29,10 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionViewHolder> {
     @Override
     public void onBindViewHolder(QuestionViewHolder holder, int position) {
         Question question = questions.get(position);
-        holder.questionCountry.setText(question.location);
-        holder.countryQuestion.setText(question.question);
-        holder.countryImage.setImageResource(question.photoId);
+        holder.questionCountry.setText(question.getLocation());
+        holder.countryQuestion.setText(question.getQuestion());
+        holder.countryImage.setImageResource(question.getPhotoId());
+        holder.questionAnswer = question.isTrue();
     }
 
     @Override

@@ -16,6 +16,7 @@ public class QuestionViewHolder extends RecyclerView.ViewHolder {
     public TextView questionCountry;
     public TextView countryQuestion;
     public ImageView countryImage;
+    public boolean questionAnswer;
 
     public QuestionViewHolder(View itemView, final Context context) {
         super(itemView);
@@ -24,26 +25,26 @@ public class QuestionViewHolder extends RecyclerView.ViewHolder {
         countryQuestion = (TextView) itemView.findViewById(R.id.country_question);
         countryImage = (ImageView) itemView.findViewById(R.id.country_image);
 
-        /*cardView.setOnClickListener(new View.OnClickListener(){
+        cardView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
 
-                int messageResId = 0;
-                boolean answerIsTrue = questionCountry[].isAnswerTrue();
+                String a;
 
-                if(answerIsTrue){
+                if(questionAnswer){
 
-                    messageResId = R.string.true_toast;
+                    a = "True";
                 }
-                else{
-                    messageResId = R.string.false_toast;
+                else {
+
+                    a = "False";
                 }
 
-                Toast.makeText(context, questionCountry.getHint(), Toast.LENGTH_SHORT).show();
+
+                Toast.makeText(context, a, Toast.LENGTH_SHORT).show();
             }
 
         });
 
-    }*/
     }
 }

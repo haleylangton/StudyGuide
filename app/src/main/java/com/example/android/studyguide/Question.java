@@ -3,10 +3,10 @@ package com.example.android.studyguide;
 
 public class Question {
 
-    public int location;
-    public int question;
-    public int photoId;
-    public boolean isTrue;
+    private int location;
+    private int question;
+    private int photoId;
+    private boolean isTrue;
 
     public int getLocation() {return location;}
 
